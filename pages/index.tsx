@@ -4,7 +4,7 @@ import { Button } from '@nextui-org/react'
 const HomePage: NextPage = () => {
   return (
     <div>
-      <Button color="danger">Click me</Button>
+      <Button>Click me</Button>
     </div>
   )
 }
