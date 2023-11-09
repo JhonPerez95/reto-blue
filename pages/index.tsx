@@ -1,7 +1,12 @@
-export default function Home() {
+import { NextPage } from 'next'
+import { Button } from '@nextui-org/react'
+
+const HomePage: NextPage = () => {
   return (
-    <>
-      <h1>Hola mundo</h1>
-    </>
+    <div>
+      <Button color="danger">Click me</Button>
+    </div>
   )
 }
+
+export default HomePage

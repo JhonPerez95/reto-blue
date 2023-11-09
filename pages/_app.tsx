@@ -1,6 +1,29 @@
-import '@/styles/globals.css'
+// import type { AppProps } from 'next/app'
+// import { NextUIProvider } from '@nextui-org/react'
+// // import '@/styles/globals.css'
+
+// function App({ Component, pageProps }: AppProps) {
+//   return (
+//     <NextUIProvider>
+//       <Component {...pageProps} />
+//     </NextUIProvider>
+//   )
+// }
+// export default App
+
+'use client'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { NextUIProvider } from '@nextui-org/react'
+
+import '../styles/globals.css'
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <NextUIProvider>
+      <Component {...pageProps} />
+    </NextUIProvider>
+  )
 }
+
+export default MyApp
