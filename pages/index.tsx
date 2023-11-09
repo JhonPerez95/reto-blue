@@ -1,9 +1,11 @@
 import { NextPage } from 'next'
 import { Button } from '@nextui-org/react'
+import { Layout } from '../components/layouts/'
 
 const HomePage: NextPage = () => {
   return (
     <div>
+      <Layout title="Blue Express" />
       <Button>Click me</Button>
     </div>
   )

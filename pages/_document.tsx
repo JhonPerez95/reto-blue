@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="es">
       <Head />
-      <title>Challage Blue</title>
+      <title>Blue Express</title>
       <body>
         <Main />
         <NextScript />
