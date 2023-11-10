@@ -21,7 +21,7 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
       <CardBody className="overflow-visible p-0 center">
         <Image
           width="100%"
-          height={270}
+          height="140"
           alt={pokemon.name}
           className=" object-cover rounded-xl max-h-[140] h-140"
           src={pokemon.img}
