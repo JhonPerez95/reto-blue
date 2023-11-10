@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage, GetStaticPaths } from 'next'
 import { Card, Button, CardBody, Image, CardHeader } from '@nextui-org/react'
+import { useRouter } from 'next/router'
 
 import { pokeApi } from '../../api'
 import { Layout } from '../../components/layouts'
@@ -10,7 +11,12 @@ interface Props {
 }
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
-  // console.log(pokemon)
+  const router = useRouter()
+
+  const onClick = () => {
+    // alert(`/pokemon/${pokemon.id}`)
+    router.push(`/favorites`)
+  }
   return (
     <Layout title={pokemon.name}>
       <div className="grid grid-rows-2 grid-flow-col gap-4">
@@ -36,7 +42,13 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
                 {pokemon.name}
               </h1>
 
-              <Button color="primary">Guardar en favoritos</Button>
+              <Button
+                radius="full"
+                className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+                onClick={onClick}
+              >
+                Guardar en favoritos
+              </Button>
             </CardHeader>
             <CardBody className="overflow-visible p-0 center">
               <p className="p-3  text-xl	">Sprites:</p>
