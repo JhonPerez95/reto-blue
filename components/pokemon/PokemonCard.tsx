@@ -17,29 +17,19 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
   }
 
   return (
-    <Card
-      shadow="sm"
-      key={pokemon.id}
-      isPressable
-      onPress={() => console.log(pokemon)}
-      onClick={onClick}
-    >
-      <CardBody className="overflow-visible p-0 ">
+    <Card shadow="sm" key={pokemon.id} isPressable onClick={onClick}>
+      <CardBody className="overflow-visible p-0 center">
         <Image
-          shadow="sm"
-          radius="lg"
           width="100%"
-          height="140"
+          height={270}
           alt={pokemon.name}
-          className=" object-cover rounded-xl h-140"
+          className=" object-cover rounded-xl max-h-[140] h-140"
           src={pokemon.img}
         />
       </CardBody>
       <CardFooter className="text-small justify-between">
-        <h4 className="font-bold text-large capitalize">
-          <small className="text-default-500">{pokemon.id}. </small>
-          {pokemon.name}
-        </h4>
+        <b className=" capitalize">{pokemon.name}</b>
+        <p className="text-default-500 ">#{pokemon.id}</p>
       </CardFooter>
     </Card>
   )
