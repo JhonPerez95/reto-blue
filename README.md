@@ -37,7 +37,9 @@ http://localhost:3000/
 En la url como es un ejercicio de rutas dinamicas se pueden navegar entre los 151 pokemons
 
 http://localhost:3000/pokemon/14
+
 http://localhost:3000/pokemon/56
+
 http://localhost:3000/pokemon/78
 
 si se ingresa otro dato, se muestra la pagina 404
