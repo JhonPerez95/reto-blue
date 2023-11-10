@@ -1,5 +1,9 @@
 ## Iniciando el proyecto
 
+Lo que busco en este ejercicio es practicar algo de rutas dinamicas en Nextjs en su version 13, para ello se utilizo la api de pokemon https://pokeapi.co/ y se creo un proyecto con Nextjs y Typescript.
+
+La idea aparte de las rutas dinamicas es sacar provecho de uno de los beneficios de Nextjs que es el pre-rendering, en este caso se utilizo el Static Generation, ya que la data de los pokemons no cambia con frecuencia.
+
 Opcion # 1 con npm
 
 ````bash
