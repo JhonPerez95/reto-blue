@@ -17,12 +17,12 @@ export const NavbarComponet = () => {
     >
       <NavbarBrand>
         <Image
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
           alt="icono de la app"
           width={80}
           height={80}
+          className="p-1"
         />
-        {/* <p className="font-bold text-inherit">ACME</p> */}
         <Link className="font-bold text-inherit" color="foreground" href="/">
           Pokemon
         </Link>
