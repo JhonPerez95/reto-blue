@@ -1,29 +1,39 @@
-## Get Started
+## Iniciando el proyecto
 
-First, run the development server:
+Opcion # 1 con npm
+
+````bash
 
 ```bash
-# First install the dependencies
+# Primero instalar las dependencias
 npm install
-# Second generate build of the project
-# NOTE: If you want to run the project in production mode, you must first next.config.js comment the line 7
-# !! If it is not commented the same, it will work the same but a small error will appear in the console
+# Segundo correr el proyecto generando el build
+# NOTA: Si desea ejecutar el proyecto en modo de producción, primero debe comentar en next.config.js la línea 7
+# Si no se comenta igual funcionará  pero aparecerá un pequeño error en la consola
 npm run build
-# third run the project
+# Correr el proyecto
 npm run start
-# Open the browser in localhost:3000
+# abrir en el navegador localhost:3000
 http://localhost:3000/
-```
+````
 
 Option # 2 with docker
 
 ```bash
-# NOTE: In Docker you must first uncomment line 7 in next.config.js
-# First create the image of the project
+# NOTA: En Docker primero debes descomentar la línea 7 en next.config.js
+# Primero crea la imagen del proyecto.
 docker build -t reto-blue .
-# Second generate container and run
+# Segundo ejecuta el contenedor
 docker run --name=container-reto1 -p 3000:3000 reto-blue
-# third open the browser in localhost:3000
+# abrir en el navegador localhost:3000
 http://localhost:3000/
 
 ```
+
+En la url como es un ejercicio de rutas dinamicas se pueden navegar entre los 151 pokemons
+
+http://localhost:3000/pokemon/14
+http://localhost:3000/pokemon/56
+http://localhost:3000/pokemon/78
+
+si se ingresa otro dato, se muestra la pagina 404
