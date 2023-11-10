@@ -1,5 +1,4 @@
 import { NextPage, GetStaticProps } from 'next'
-import { Button } from '@nextui-org/react'
 import { Layout } from '../components/layouts/'
 import { PokemonCard } from '../components/pokemon/'
 import { IPokemonListResponse, ISmallPokemon } from '../interfaces/'
@@ -11,18 +10,12 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
   return (
     <div>
       <Layout title="Blue Express" />
-      {pokemons.map((pokemon) => (
-        <>
-          <PokemonCard key={pokemon.id} pokemon={pokemon} />
-          {/* <div key={pokemon.id}>
-            <p>{pokemon.id}</p>
-            <p>{pokemon.name}</p>
-            <img src={pokemon.img} alt={pokemon.name} />
-          </div> */}
-        </>
-      ))}
 
-      <Button color="primary">Click me</Button>
+      <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
+        {pokemons.map((pokemon) => (
+          <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        ))}
+      </div>
     </div>
   )
 }
